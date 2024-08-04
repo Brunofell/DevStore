@@ -1,6 +1,7 @@
 package com.example.DevStore.entity;
 
 import com.example.DevStore.DTO.usuario.DadosCadastroUsuario;
+import com.example.DevStore.DTO.usuario.DadosUpdateUsuario;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -32,5 +33,33 @@ public class Usuario {
         this.telefone = dados.telefone();
         this.cpf = dados.cpf();
         this.cep = dados.cep();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void excluir() {
+        this.ativo = false;
+    }
+
+    public void atualizarInfos(DadosUpdateUsuario dados) {
+        if(dados.nome() != null){
+            this.nome = dados.nome();
+        }
+        if(dados.email() != null){
+            this.email = dados.email();
+        }
+        if(dados.senha() != null){
+            this.senha = dados.senha();
+        }
+        if(dados.telefone() != null){
+            this.telefone = dados.telefone();
+        }
+        if(dados.cpf() != null){
+            this.cpf = dados.cpf();
+        }
+        if(dados.cep() != null){
+            this.cep = dados.cpf();
+        }
     }
 }
