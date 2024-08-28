@@ -2,8 +2,6 @@ package com.example.DevStore.entity;
 
 import com.example.DevStore.DTO.produto.DadosCadastroProduto;
 import com.example.DevStore.DTO.produto.DadosUpdateProduto;
-import com.example.DevStore.DTO.usuario.DadosCadastroUsuario;
-import com.example.DevStore.DTO.usuario.DadosUpdateUsuario;
 import jakarta.persistence.*;
 import lombok.*;
 
